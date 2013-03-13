@@ -13,5 +13,5 @@ Cライブラリのstrtoul()について、少し調査した。
  ULONG_MAX + 1  #=> NG(エラー)  
 
 [結果]  
- errno と strtoul()の第2引数(endptr)の長さで判定する。  
-
+ errno と strtoul()の第2引数(endptr)の長さで判定する。    
+( 正しい値が表現可能な値の範囲外: LONG_MIN or LONG_MAX (errno に ERANGE の値を格納) )
